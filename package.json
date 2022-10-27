@@ -4,6 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "start:xata": "xata init --schema=schema.template.json --codegen=utils/xata.codegen.ts",
     "poststart:xata": "xata codegen",
     "xata": "xata codegen"
@@ -24,10 +25,5 @@
     "next": "^13.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
   }
 }
