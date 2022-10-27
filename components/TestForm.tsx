@@ -3,7 +3,7 @@ import { getXataClient } from "../utils/xata.codegen";
 // require('dotenv').config()
 import * as dotenv from "dotenv";
 import { send } from "process";
-dotenv.config();
+// dotenv.config();
 // import fetch from "node-fetch";
 
 export const TestForm = () => {
@@ -32,7 +32,7 @@ export const TestForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-        //   console.log(name, description, title, occupation);
+           console.log(name, description, title, occupation);
           send();
           //   console.log(process.env)
         }}
