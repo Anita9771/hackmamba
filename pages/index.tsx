@@ -61,7 +61,7 @@ export default function IndexPage({
 
 export const getServerSideProps = async () => {
   const xata = await getXataClient();
-  const links = await xata.db.nextjs_with_xata_example.getAll();
+  const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
     {

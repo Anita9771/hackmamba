@@ -32,7 +32,7 @@ export const TestForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(name, description, title, occupation);
+        //   console.log(name, description, title, occupation);
           send();
           //   console.log(process.env)
         }}

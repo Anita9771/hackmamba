@@ -50,7 +50,7 @@ npm run start:xata
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-> 💡 the template will prompt you to create a dummy new table (`nextjs_with_xata_example`) with some useful resources.
+> 💡 the template will prompt you to create a dummy new table (`clients`) with some useful resources.
 
 ## Notes
 

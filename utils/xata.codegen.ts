@@ -8,7 +8,7 @@ import {
 
 const tables = [
   {
-    name: "nextjs_with_xata_example",
+    name: "clients",
     columns: [
       { name: "title", type: "string" },
       { name: "description", type: "string" },
@@ -21,11 +21,11 @@ const tables = [
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type NextjsWithXataExample = InferredTypes["nextjs_with_xata_example"];
+export type NextjsWithXataExample = InferredTypes["clients"];
 export type NextjsWithXataExampleRecord = NextjsWithXataExample & XataRecord;
 
 export type DatabaseSchema = {
-  nextjs_with_xata_example: NextjsWithXataExampleRecord;
+  clients: NextjsWithXataExampleRecord;
 };
 
 const DatabaseClient = buildClient();

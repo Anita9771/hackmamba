@@ -7,7 +7,7 @@ import { getXataClient } from "../../utils/xata.codegen";
  const handler: NextApiHandler = async (req, res) => {
     const xata = await getXataClient();
     const {name, occupation, title, description } = req.body;
-    await xata.db.nextjs_with_xata_example.create({
+    await xata.db.clients.create({
         description,
         title,
         name,
