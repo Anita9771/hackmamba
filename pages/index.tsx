@@ -46,9 +46,10 @@ export default function IndexPage({
       {links.map((link) => {
         return (
           <section key={link.id}>
+          <p>{link.name}</p>
           <p>{link.title}</p>
           <p>{link.description}</p>
-          <p>{link.url}</p>
+          <p>{link.occupation}</p>
           </section>
         );
       })}
