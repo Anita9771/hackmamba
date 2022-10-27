@@ -8,23 +8,12 @@ import {
 
 const tables = [
   {
-    name: "Posts",
+    name: "nextjs_with_xata_example",
     columns: [
       { name: "title", type: "string" },
-      { name: "labels", type: "multiple" },
-      { name: "slug", type: "string" },
-      { name: "text", type: "text" },
-      { name: "author", type: "link", link: { table: "Users" } },
-      { name: "createdAt", type: "datetime" },
-      { name: "views", type: "int" },
-    ],
-  },
-  {
-    name: "Users",
-    columns: [
+      { name: "description", type: "string" },
       { name: "name", type: "string" },
-      { name: "email", type: "email" },
-      { name: "bio", type: "text" },
+      { name: "occupation", type: "string" },
     ],
   },
 ] as const;
@@ -32,21 +21,17 @@ const tables = [
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type Posts = InferredTypes["Posts"];
-export type PostsRecord = Posts & XataRecord;
-
-export type Users = InferredTypes["Users"];
-export type UsersRecord = Users & XataRecord;
+export type NextjsWithXataExample = InferredTypes["nextjs_with_xata_example"];
+export type NextjsWithXataExampleRecord = NextjsWithXataExample & XataRecord;
 
 export type DatabaseSchema = {
-  Posts: PostsRecord;
-  Users: UsersRecord;
+  nextjs_with_xata_example: NextjsWithXataExampleRecord;
 };
 
 const DatabaseClient = buildClient();
 
 const defaultOptions = {
-  databaseURL: "https://annietah-70hp76.us-east-1.xata.sh/db/photography",
+  databaseURL: "https://annietah-70hp76.xata.sh/db/with-xata-app",
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
