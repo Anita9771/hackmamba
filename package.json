@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node_modules/next/dist/bin/next start -p $PORT",
+    "start": "next start",
     "lint": "next lint",
     "start:xata": "xata init --schema=schema.template.json --codegen=utils/xata.codegen.ts",
     "poststart:xata": "xata codegen",
